@@ -14,7 +14,7 @@
 
 #### 1.1 What is testing?
 
-It's about evaluationg and verifying that a software product or application does what it is supposed to do.
+It's about evaluating and verifying that a software product or application does what it is supposed to do.
 
 #### 1.2 Why should i test my programs?
 
