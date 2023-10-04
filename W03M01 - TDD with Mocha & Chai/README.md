@@ -1,4 +1,5 @@
 # M01-W03 | TDD with Mocha and Chai
+[Github Repository](https://github.com/Alfredo08/Cohort-September-18-2023/tree/main/W03M01%20-%20TDD%20with%20Mocha%20%26%20Chai) | [Vimeo Video Recording]()
 
 ## Topics to cover
 
@@ -384,3 +385,9 @@ module.exports = math
 ```
 
 This way, tests are the ones dictating how each function should behave. Instead of writing tests after we already defined how the logic of the function has to be.
+
+### Useful Links
+
+* [Mocha documentation](https://www.w3resource.com/mocha/getting-started.php)
+* [Chai documentation](https://www.chaijs.com/)
+* [Chains in chai](https://devdocs.io/chai/api/bdd/index#method_deep)
