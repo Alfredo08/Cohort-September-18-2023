@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="EN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> EJS Demonstration </title>
+    </head>
+    <body>
+        <h1> <%= course %> </h1>
+        <h2> Student list: </h2>
+        <ol>
+            <% for(let i = 0; i < students.length; i ++){ %> 
+                <li> <%= students[i].firstName %> <%= students[i].lastName %> - <%= students[i].age %></li>
+            <% } %>
+        </ol>
+
+    </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "w06m03---web-servers-101",
+  "version": "1.0.0",
+  "description": "[Github Repository](https://github.com/Alfredo08/Cohort-September-18-2023/tree/main/W06M03%20-%20Web%20Servers%20101) | [Vimeo Video Recording]()",
+  "main": "1-http-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}
