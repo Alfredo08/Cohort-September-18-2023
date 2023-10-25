@@ -261,3 +261,5 @@ In this way, our `.ejs` within the `/views` directory should look like this:
 - [MDN Web Docs: What is a web server? (12min read)](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server)
 
 - [Using Template Engines with Express (express.js docs)](https://expressjs.com/en/guide/using-template-engines.html)
+
+- [Status Codes](https://www.restapitutorial.com/httpstatuscodes.html)
