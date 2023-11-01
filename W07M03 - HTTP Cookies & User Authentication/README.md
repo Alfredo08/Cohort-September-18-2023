@@ -1,5 +1,5 @@
 # M03 W07 | HTTP Cookies & User Authentication
-[Github Repository](https://github.com/Alfredo08/Cohort-September-18-2023/tree/main/W07M03%20-%20HTTP%20Cookies%20%26%20User%20Authentication) | [Vimeo Video Recording]()
+[Github Repository](https://github.com/Alfredo08/Cohort-September-18-2023/tree/main/W07M03%20-%20HTTP%20Cookies%20%26%20User%20Authentication) | [Vimeo Video Recording](https://vimeo.com/880018323/5f2f715465?share=copy)
 
 ## Topics to cover
 
