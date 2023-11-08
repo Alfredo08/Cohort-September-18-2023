@@ -1,5 +1,5 @@
 # M04 W08 | Intro to CSS
-[Github Repository](https://github.com/Alfredo08/Cohort-September-18-2023/tree/main/W08M04%20-%20Intro%20to%20CSS) | [Vimeo Video Recording](https://vimeo.com/882282539/040980405e?share=copy)
+[Github Repository](https://github.com/Alfredo08/Cohort-September-18-2023/tree/main/W08M04%20-%20Intro%20to%20CSS) | [Vimeo Video Recording](https://vimeo.com/882335255/d57ffb7493?share=copy)
 
 ## Topics to cover
 
