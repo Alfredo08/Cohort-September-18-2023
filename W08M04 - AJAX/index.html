@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> AJAX </title>
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body>
+        <h1> Dog CEO API </h1>
+        <form class="dog-image-info">
+            <label for="number-of-dogs">
+                How many dogs do you want to retrieve?
+            </label>
+            <input type="number" id="number-of-dogs" name="number-of-dogs">
+            <button>
+                Get the dogs!
+            </button>
+        </form>
+        <div class="dog-results"></div>
+
+        <h1> News Org API </h1>
+        <form class="news-info">
+            <label for="search-term">
+                Search criteria:
+            </label> 
+            <input type="text" id="search-term" name="search-term">
+            <button>
+                Get the news!
+            </button>
+        </form>
+        <div class="news-results"></div>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="./js/index.js"></script>
+    </body>
+</html>

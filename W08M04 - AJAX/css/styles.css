@@ -1,0 +1,10 @@
+.dog-results{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.dog-image{
+    width: 300px;
+}
