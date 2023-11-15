@@ -1,5 +1,5 @@
 
-/* Vanilla JavaScript AJAX request */
+/* Vanilla JS AJAX request */
 const dogForm = document.querySelector('.dog-image-info');
 
 dogForm.addEventListener('submit', (event) => {
@@ -9,85 +9,75 @@ dogForm.addEventListener('submit', (event) => {
     const settings = {
         method: 'GET'
     };
-    /*
-    if(numberOfDogs < 0 ){
-        alert("Please provide a positive number");
-        return;
-    }
-    */
 
     $.get(URL, settings)
-        .done(data => {
+        .done((data) => {
             const dogResults = document.querySelector('.dog-results');
             dogResults.innerHTML = "";
-            data.message.forEach(image => {
+            data.message.forEach((image) => {
                 dogResults.innerHTML += `<img src="${image}" alt="Dog image" class="dog-image">`;
             });
         })
-        .fail(error => {
-            console.log("Something went wrong", error);
+        .fail((error) => {
+            console.log(error);
         });
-
     /*
     fetch(URL, settings)
-        .then(response => {
+        .then((response) => {
             if(response.status === 200){
                 return response.json();
             }
-            throw new Error(response.json());
-        })
-        .then(data => {
+            throw new Error("Something went wrong!");
+        }).then((data) => {
             const dogResults = document.querySelector('.dog-results');
             dogResults.innerHTML = "";
-            data.message.forEach(image => {
+            data.message.forEach((image) => {
                 dogResults.innerHTML += `<img src="${image}" alt="Dog image" class="dog-image">`;
             });
         })
-        .catch(error => {
-            console.log("Something went wrong", error);
+        .catch((error) => {
+            console.log(error);
         });
     */
-
 });
 
 /* jQuery AJAX request */
-const $newsForm = $('.news-info');
-
-$($newsForm).on('submit', (event) => {
+$('.news-info').on('submit', (event) => {
     event.preventDefault();
-    $searchTerm = $('#search-term').val();
+    const $searchCriteria = $('#search-criteria').val();
+    const $numberOfNews = $('#number-of-news').val();
+    const API_KEY = 'YOUR API KEY GOES HERE!!!';
 
-    /*
     $.ajax({
-        url: `https://newsapi.org/v2/everything`,
-        headers: {
-            'X-Api-Key' : 'e993fe0805de4ec0abaff5d967e9302a'
-        },
+        url: 'https://newsapi.org/v2/everything',
         data: {
-            q: $searchTerm,
-            pageSize: 10
+            q: $searchCriteria,
+            pageSize: $numberOfNews
         },
         method: 'GET',
+        headers: {
+            'X-Api-Key': API_KEY
+        },
         success: (data) => {
-            const $newsResults = $('.news-results');
-            $($newsResults).empty();
-
+            $('.news-results').empty();
             data.articles.forEach((article) => {
-                $($newsResults).append(`
+                $('.news-results').append(`
                     <h2> ${article.title} </h2>
                     <div>
                         <img src="${article.urlToImage}" alt="${article.title}">
                     </div>
                     <h4> ${article.author} </h4>
-                    <p> ${article.description} </p>
-                    <a href="${article.url}" target="_blank"> Go to the full article </a>
+                    <p> ${article.content} </p>
+                    <a href="${article.url}" target="_blank"> Full article </a>
                 `);
             });
+            if(data.articles.length === 0){
+                $('.news-results').html(`<h1 class="no-results"> No results with your search criteria: "${$searchCriteria}" </h1>`);
+            }
         },
-        error: (error) => {
-            alert(error.responseJSON.message);
-        } 
-    });*/
-   
-});
+        error: (err) => {
+            console.log(err);
+        }
+    })
 
+});
