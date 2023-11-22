@@ -1,0 +1,91 @@
+/* CSS for mobile views and above */
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*
+.extra-size{
+    font-size: 1.2em;
+} */
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-image{
+    width: 50%;
+}
+
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(159, 159, 159);
+    color: white;
+    padding: 5px;
+}
+
+.menu{
+    display: none;
+}
+
+main{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(198, 198, 198);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 25px;
+    padding-inline-start: 0;
+}
+
+/* CSS for tablet views and above */
+@media only screen and (min-width: 600px){
+    header{
+        flex-direction: row;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .social{
+        justify-content: space-around;
+    }
+}
+
+/* CSS for larger views and above */
+@media only screen and (min-width: 992px){
+    .menu{
+        display: flex;
+        list-style: none;
+        gap: 50px;
+        padding-right: 10px;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    main{
+        flex-direction: row;
+    }
+
+    .product{
+        flex: 1;
+    }
+}

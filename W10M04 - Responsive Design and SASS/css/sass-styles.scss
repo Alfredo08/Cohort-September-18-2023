@@ -1,0 +1,73 @@
+/* Import variables from external file */
+@import 'sass-variables';
+
+li{
+    font-size: $title-font-size;
+    /*color: $text-color;*/
+}
+
+h2{
+    color: $text-color;
+}
+
+/* Nesting */
+.navbar{
+    background-color: aqua;
+    .menu{
+        color: black;
+        li{
+            padding: 50px;
+        }
+    }
+    &:hover{
+       cursor: pointer;
+       background-color: yellow; 
+    }
+}
+
+.product{
+    p{
+        &.extra-size{
+            font-weight: bold;
+        }
+    }
+}
+
+/* Inheritance */
+h1{
+    color: $text-color;
+    font-style: italic;
+    background-color: cornflowerblue;
+}
+
+.extra-size{
+    @extend h1;
+    border: 3px dotted blue;
+}
+
+/* Mixin */
+@mixin theme($color, $background, $font, $border){
+    color: $color;
+    background-color: $background;
+    font-size: $font;
+    border-color: $border;
+    border-width: 5px;
+    border-style: dashed;
+}
+
+.item-one{
+    @include theme(white, black, 20px, red);
+}
+
+.item-two{
+    @include theme(aqua, gray, 40px, blue);
+}
+
+.extra-special{
+    @include theme(orange, black, 50px, pink);
+    font-style: italic;
+}
+
+.item-four{
+    @include theme(green, blue, 60px, yellow);
+}
