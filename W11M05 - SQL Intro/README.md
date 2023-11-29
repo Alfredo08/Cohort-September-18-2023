@@ -1,5 +1,5 @@
-# M05 W11 | Intro to SQL
-[Github Repository]() | [Vimeo Video Recording]()
+# M05 W11 | SQL Intro
+[Github Repository](https://github.com/Alfredo08/Cohort-September-18-2023/tree/main/W11M05%20-%20Intro%20to%20SQL) | [Vimeo Video Recording]()
 
 ## Topics to cover
 - [X] RDBMS, Structured Data and SQL
@@ -91,3 +91,7 @@
 - You can control the amount of results you get back from a SELECT statement
 - LIMIT clause
 - Useful for getting top 10, or best or bottom 3
+
+## Documentation links
+* [PostgreSQL Cheat Sheet](https://www.postgresqltutorial.com/postgresql-cheat-sheet/)
+* [SQL Documentation](https://www.w3schools.com/sql/)
