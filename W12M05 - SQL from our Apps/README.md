@@ -1,8 +1,8 @@
 # M05 W12 | SQL from our Apps
-[Github Repository]() | [Vimeo Video Recording]()
+[Github Repository](https://github.com/Alfredo08/Cohort-September-18-2023/tree/main/W12M05%20-%20SQL%20from%20our%20Apps) | [Vimeo Video Recording](https://vimeo.com/891699172/2901beb9e9?share=copy)
 
 ## Topics to cover
-- [x] SQL Review
+- [x] Server architecture review
 - [x] Perform `BREAD` actions on database via command line app
 - [x] Connect to DB via PG
 - [x] Pool vs Client
