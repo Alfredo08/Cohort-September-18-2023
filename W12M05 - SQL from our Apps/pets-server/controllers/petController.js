@@ -11,7 +11,11 @@ petController.get('/pets', (req, res) => {
                 pets: result.rows
             };
             return res.render('pets', templateVariables);
+            // In case we want to send back a json object or json array
             // return res.status(200).json(result.rows);
+        })
+        .catch((error) => {
+            console.log(error);
         });
 });
 
@@ -22,6 +26,9 @@ petController.get('/new/pet', (req, res) => {
                 users: result.rows
             };
             return res.render('new-pet', templateVariables);
+        })
+        .catch((error) => {
+            console.log(error);
         });
 });
 
@@ -36,7 +43,13 @@ petController.get('/edit/pet/form/:id', (req, res) => {
                 .then((resultPet) => {
                     templateVariables['currentPet'] = resultPet.rows[0]
                     return res.render('edit-pet', templateVariables);
+                })
+                .catch((error) => {
+                    console.log(error);
                 });
+        })
+        .catch((error) => {
+            console.log(error);
         });
     
 });
@@ -47,6 +60,9 @@ petController.post('/create/pet', (req, res) => {
         .then((result) => {
             console.log(result);
             return res.redirect('/pets');
+        })
+        .catch((error) => {
+            console.log(error);
         });
 });
 

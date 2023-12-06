@@ -14,7 +14,7 @@ const createOne = (data) => {
         VALUES ($1, $2, $3, $4) RETURNING *;`;
         
         // data must be an array holding the params listed in the previous query
-        // The params must come in that order
+        // The params must come in that order stated in the query
         return pool.query(nativeQuery, data);
 }
 

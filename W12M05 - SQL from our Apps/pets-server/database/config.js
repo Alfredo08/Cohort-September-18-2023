@@ -8,10 +8,10 @@ const pool = new Pool({
 
 pool.connect()
     .then(() => {
-        console.log('If the database was connected successfully');
+        console.log('The database was connected successfully');
     })
     .catch((error) => {
-        console.log('If there is an error:', error); 
+        console.log('There is an error:', error); 
     });
 
 module.exports = pool;
