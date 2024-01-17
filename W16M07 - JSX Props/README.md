@@ -1,8 +1,8 @@
 # M07 W16 | JSX and Props
-[Github Repository]() | [Vimeo Video Recording]()
+[Github Repository](https://github.com/Alfredo08/Cohort-September-18-2023/tree/main/W16M07%20-%20JSX%20Props) | [Vimeo Video Recording]()
 
 ## Topics to cover
-- [x] What the heck is React?
+- [x] What is React?
 - [x] Building a project w/ Create-React-App
 - [x] JavaScript and XML (JSX)
 - [x] Props
