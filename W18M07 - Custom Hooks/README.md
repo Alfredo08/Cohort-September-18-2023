@@ -29,3 +29,6 @@ Note how much smaller are components become as we break out complex pieces into 
 * [Use Hooks](https://usehooks.com/)
 * [Awesome React Hooks](https://github.com/rehooks/awesome-react-hooks)
 * [Collection of React Hooks](https://nikgraf.github.io/react-hooks/)
+* [Public APIS's](https://github.com/public-apis/public-apis)
+* [DOG CEO API](https://dog.ceo/dog-api/)
+* [THE CAT API](https://developers.thecatapi.com/view-account/ylX4blBYT9FaoVd6OhvR?report=bOoHBz-8t)
