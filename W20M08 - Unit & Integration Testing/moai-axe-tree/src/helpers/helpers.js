@@ -27,16 +27,18 @@ export const genFeedbackMessage = (status) => {
 };
 
 export const robotChoice = (playerSelection, cheating) => {
-  const winning = {
-    Tree: 'Axe',
-    Axe: 'Moai',
-    Moai: 'Tree'
-  };
-  if (cheating) {
-    return winning[playerSelection];
+  // If the robot is cheating
+  if(cheating){
+    const winningOption ={
+      Tree: 'Axe',
+      Axe: 'Moai',
+      Moai: 'Tree'
+    }
+    return winningOption[playerSelection];
   }
 
-  const options = ['Moai', 'Axe', 'Tree'];
-  const randomIndex = Math.floor(Math.random() * options.length);
+  // If the robot is not cheating
+  const options = ['Axe', 'Moai', 'Tree'];
+  const randomIndex = Math.floor((Math.random() * options.length));
   return options[randomIndex];
-};
+}

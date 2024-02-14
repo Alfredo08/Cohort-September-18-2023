@@ -1,5 +1,5 @@
 # M08 W20 | Unit & Integration Testing
-[Github Repository]() | [Vimeo Video Recording]()
+[Github Repository](https://github.com/Alfredo08/Cohort-September-18-2023/tree/main/W20M08%20-%20Unit%20%26%20Integration%20Testing) | [Vimeo Video Recording]()
 
 ## Topics to cover
 

@@ -1,4 +1,5 @@
-import { announceResult, robotChoice } from '../helpers'
+import { robotChoice, announceResult } from "../helpers";
+
 
 describe('announceResult function', () => {
     let fakeState;
@@ -35,26 +36,22 @@ describe('announceResult function', () => {
     });
   });
 
-  describe('robotChoice function', () => {
+describe('Robot choice function', () => {
+    test('Returns the winning item if cheating is set to false', () => {
+        const playerSelection = 'Moai';
+        const cheating = false;
 
-    test('returns the winning item if cheating is true', () => {
-      const playerSelection = 'Moai';
-      const cheating = true;
-  
-      const actual = robotChoice(playerSelection, cheating);
-      const expected = 'Tree';
-  
-      expect(actual).toBe(expected);
+        const actual = robotChoice(playerSelection, cheating);
+        const expected = ['Moai', 'Axe', 'Tree'];
+        // console.log(actual);
+        expect(expected).toContain(actual);
     });
-  
-    test('returns a valid item if cheating is false', () => {
-      const playerSelection = 'Moai';
-      const cheating = false;
-  
-      const actual = robotChoice(playerSelection, cheating);
-      const expected = ['Moai', 'Axe', 'Tree'];
-  
-      expect(expected).toContain(actual);
+
+    test('Returns the winning item if cheating is set to true', () => {
+        const playerSelection = 'Moai';
+        const cheating = true;
+        const actual = robotChoice(playerSelection, cheating);
+        const expected = 'Tree';
+        expect(expected).toBe(actual);
     });
-  
-  });
+});

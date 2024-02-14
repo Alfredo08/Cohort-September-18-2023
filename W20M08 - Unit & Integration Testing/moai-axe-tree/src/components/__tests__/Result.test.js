@@ -1,56 +1,43 @@
-import React from 'react';
-import {render, fireEvent, getByTestId} from '@testing-library/react';
 import Result from './../Result';
-// import the library under test
+import { fireEvent, render, getByTestId } from '@testing-library/react';
 import axios from 'axios';
 
-// tell jest to fake that library
+// Tell jest to simulate/fake the axios request
 jest.mock('axios');
 
-// create fake data
-const data = [
-  {
-    id: 1,
-    name: 'Alice',
-    points: 15
-  },
-  {
-    id: 2,
-    name: 'Bob',
-    points: 10
-  },
-  {
-    id: 3,
-    name: 'Carol',
-    points: 5
-  },
+const mockData = [
+    {
+        "id": 1,
+        "name": "Player 1",
+        "points": 36
+    },
+    {
+        "id": 2,
+        "name": "Player 2",
+        "points": 29
+    },
+    {
+        "id": 3,
+        "name": "Player 3",
+        "points": 22
+    }
 ];
 
-test('shows appropriate message when the status is "Waiting"', () => {
-    const fakeState = {
-        compSelection: null,
-        playerSelection: null,
-        status: 'Waiting',
-        cheating: false
-    };
 
-    const { container } = render(<Result status={fakeState.status} />);
-    expect(getByTestId(container, 'result_footer')).toHaveTextContent('Waiting for your choice!');
-});
+test('Displays the high scores from the API', () => {
+    // 1) Preparing the simulation of the axios request
+    axios.get.mockResolvedValue({data: mockData});
 
-test('can display high scores from an API', () => {
-    // tell jest to interrupt axios.get requests
-    axios.get.mockResolvedValue({ data });
-  
-    // render the component
-    const {getByTestId, findByText, container, debug} = render(<Result status="Waiting" />);
-  
-  
-    // find the high scores button
+    // 2) Render the Result component, don't forget about props
+    const {getByTestId, debug, findByText} = render(<Result status="Waiting"/>)
+
+    // 3) Find the high scores button
     const highScoresButton = getByTestId('high-scores');
-  
-    // click on the high scores button
-    fireEvent.click(highScoresButton);
 
-    return findByText('Alice', { exact: false });
-  });
+    // 4) Click on the high scores button
+    fireEvent.click(highScoresButton);
+    
+    // 5) Find the text of Player 2
+    return findByText('Player 2', {exact: false});
+
+}); 
