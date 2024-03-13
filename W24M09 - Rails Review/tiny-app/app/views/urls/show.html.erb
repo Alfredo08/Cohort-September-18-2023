@@ -1,0 +1,22 @@
+<h1> Add new URL </h1>
+<form action="/urls" method="POST">
+    <div>
+        <label for="longURL">
+            URL:
+        </label>
+        <input type="text" id="longURL" name="longURL">
+    </div>
+    <div>
+        <label for="users_id">
+            User:
+        </label>
+        <select name="users_id" id="users_id">
+            <% @users.each do |user| %>
+            <option value="<%= user.id %>"> <%= user.email %> </option>
+            <% end %>
+        </select>
+    </div>
+    <button type="submit">
+        Add
+    </button>
+</form>
