@@ -1,5 +1,5 @@
 # M09 W24 | Rails Review
-[Github Repository]() | [Vimeo Video Recording]()
+[Github Repository](https://github.com/Alfredo08/Cohort-September-18-2023/tree/main/W24M09%20-%20Rails%20Review) | [Vimeo Video Recording](https://vimeo.com/922770464/14733b477d?share=copy)
 
 ## Topics to cover 
 
